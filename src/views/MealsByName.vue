@@ -12,7 +12,6 @@
 <script setup>
   import { computed } from '@vue/reactivity';
   import { ref } from 'vue';
-  import axiosClient from '../axiosClient';
   import store from '../store';
 
   const keyword = ref('');

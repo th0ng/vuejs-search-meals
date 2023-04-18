@@ -20,11 +20,13 @@ const routes = [
         path: "/by-letter/:letter?",
         name: "byLetter",
         component: MealsByLetter,
+        props: true,
       },
       {
         path: "/by-name/:name?",
         name: "byName",
         component: MealsByName,
+        props: true,
       },
       {
         path: "/by-ingredient/:ingredient?",

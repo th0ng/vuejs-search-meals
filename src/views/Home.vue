@@ -14,7 +14,6 @@ const ingredients = ref([])
 
 onMounted(async () => {
   const response = await axiosClient.get('/categories.php');
-  console.log(response.data);
   ingredients.value = response.data;
 })
 

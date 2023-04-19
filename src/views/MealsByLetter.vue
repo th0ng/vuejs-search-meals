@@ -6,7 +6,7 @@
       </router-link>
     </div>
     <div>
-      <pre>{{ meals }}</pre>
+      <meals />
     </div>
   </div>
 
@@ -15,11 +15,11 @@
 <script setup>
 import { computed } from '@vue/reactivity';
 import store from '../store';
+import Meals from '../components/Meals.vue';
 
 const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const meals = computed(() => store.state.searchedMeals);
 function searchMealsByLetter(letter) {
   store.dispatch('searchMealsByLetter', letter);
 }
-
 </script>

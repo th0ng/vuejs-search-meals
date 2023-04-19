@@ -4,7 +4,7 @@
   </div>
 
   <div>
-    <pre>{{  meals }}</pre>
+    <meals />
   </div>
 
 </template>
@@ -13,6 +13,8 @@
   import { computed } from '@vue/reactivity';
   import { ref } from 'vue';
   import store from '../store';
+
+  import Meals from '../components/Meals.vue';
 
   const keyword = ref('');
   const meals = computed(() => store.state.searchedMeals)

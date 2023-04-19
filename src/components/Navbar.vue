@@ -1,5 +1,5 @@
 <template>
- <header class="bg-white shadow-sm h-16 flex justify-between items-stretch">
+ <header class="bg-purple-200 shadow-sm h-16 flex justify-between items-stretch">
       <router-link :to="{name: 'home'}" class="inline-flex items-center h-full px-5 ">
         Home
       </router-link>

@@ -1,20 +1,30 @@
 <template>
-  <div class="flex flex-col p-8">
-    <pre>{{ ingredients }}</pre>
+  <div class="container grid grid-cols-2 lg:grid-cols-3 mx-auto px-2 pt-2 gap-2">
+    <div v-for="category in categories.categories" :key="category.idCategory">
+      <div class="max-w-sm rounded-xl overflow-hidden shadow-lg">
+        <img class="w-full" :src="category.strCategoryThumb" alt="Image of category">
+        <div class="px-6 py-4">
+          <div class="font-semibold text-center text-xl mb-2">
+            {{ category.strCategory }}
+          </div>
+          <p class="text-gray-700 text-base">
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from "vue";
-import store from "../store";
+import { onMounted, ref } from "vue";
 import axiosClient from "../axiosClient";
 
 
-const ingredients = ref([])
+const categories = ref([])
 
 onMounted(async () => {
   const response = await axiosClient.get('/categories.php');
-  ingredients.value = response.data;
+  categories.value = response.data;
 })
 
 </script>

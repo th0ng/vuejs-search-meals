@@ -19,7 +19,6 @@
 import { onMounted, ref } from "vue";
 import axiosClient from "../axiosClient";
 
-
 const categories = ref([])
 
 onMounted(async () => {

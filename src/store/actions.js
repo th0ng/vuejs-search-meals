@@ -17,9 +17,3 @@ export function searchMealsByIngredient({ commit }, ingredient) {
     commit("setSearchedMeals", data);
   });
 }
-
-export function getCategories({ commit }) {
-  axiosClient.get("/categories.php").then(({ data }) => {
-    commit("setCategories", data);
-  });
-}

@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<åscript setup>
 import { computed } from '@vue/reactivity';
 import store from '../store';
 import Meals from '../components/Meals.vue';
